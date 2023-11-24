@@ -36,9 +36,13 @@ Following tools are installed:
 During startup multiple certificates are created:
 
 /keys/server Self signed server certificate for DNS localhost and IP 127.0.0.1
+
 /keys/client-ca Self signed ca certificate
+
 /keys/auth Client certificate issued by client ca with "CN=Auth Client", used by auth callout service
+
 /keys/client-a Client certificate issued by client ca with "CN=client-a Client"
+
 /keys/client-b Client certificate issued by client ca with "CN=client-b Client"
 
 # Nats Server Configuration
