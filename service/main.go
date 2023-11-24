@@ -49,7 +49,7 @@ func run() error {
 		nats.ClientCert(
 			"keys/auth.crt", "keys/auth.key",
 		),
-		nats.Secure(&tls.Config{InsecureSkipVerify: true}),
+		nats.Secure(&tls.Config{InsecureSkipVerify: true}), // Dont do this in production!
 	)
 	if err != nil {
 		return err

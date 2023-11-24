@@ -12,6 +12,18 @@ running and when opening select open in container.
 You can also always switch to the dev container in the bottom left.
 The nats auth callout service code is based on https://github.com/ConnectEverything/nats-by-example/tree/main/examples/auth/callout
 
+
+# Running the demo
+
+1. Open in vscode with dev container.
+2. Run `nats-server --config server/config.conf` on a terminal
+3. Run auth callout service in vscode with F5 or launch target `Launch ACS`
+4. Try connecting with client-cert-a
+  1. Run `nats --tlscert keys/client-a.crt --tlskey keys/client-a.key --tlsca keys/server.crt account info`
+5. Inspect debug console output
+  1. You should find the incoming auth request encoded as jwt, decode on jwt.io and explorer information provided
+  2. You should also find the response jwt, also decode and learn
+
 # Dev Container
 
 The dev container uses mcr.microsoft.com/devcontainers/go:1-1.21-bullseye as base image.
